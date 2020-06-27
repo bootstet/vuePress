@@ -1,0 +1,24 @@
+{
+  "name": "bootstet",
+  "version": "1.0.0",
+  "description": "博客试搭",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@mr-hope/vuepress-plugin-comment": "^0.6.8",
+    "typescript": "^3.9.5",
+    "vuepress": "^1.5.2",
+    "vuepress-theme-hope": "^0.6.8",
+    "webpack-dev-middleware": "3.6.0"
+  },
+  "dependencies": {
+    "vuepress-theme-ting": "^2.0.2"
+  }
+}
