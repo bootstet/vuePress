@@ -11,7 +11,9 @@ module.exports = resolve({
     lineNumbers: false      // 代码块显示行号
   },
   themeConfig: {
-    logo: '/avatar.jpg',  // 左上角logo
+    // logo: '/avatar.jpg',  // 左上角logo
+    // logo: '/avatar2.jpeg',  // 左上角logo
+    logo: '/avatar3.jpeg',  // 左上角logo
     nav:[ // 导航栏配置
       {text: '首页', link: '/' },
       {text: '目录', link: '/components/page/' },
@@ -41,6 +43,16 @@ module.exports = resolve({
         ]
       },
       {
+        title: '前端工程化',   // 必要的
+        collapsable: true, // 可选的, 默认值是 true,
+        sidebarDepth: 3,    // 可选的, 默认值是 1
+        children: [
+          ['/components/engineering/', '前端工程化'],
+          ['/components/engineering/scaffold.md', '脚手架工具'],
+          ['/components/engineering/yeoman.md', 'yeoman使用'],
+        ]
+      },
+      {
         title: '面试题整理',   // 必要的
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 3,    // 可选的, 默认值是 1
@@ -64,7 +76,7 @@ module.exports = resolve({
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 1, 
         children: [
-          ['/components/gnosis/', '感悟人生']
+          ['/components/gnosis/', '巴拉巴拉']
         ]
       },
       {
