@@ -3,11 +3,11 @@ home: true
 heroText: TypeScript
 tagline: 持续更新
 --- -->
-### TypeScript 
+## TypeScript 
 + 基于javascript语言之上的语言，解决了JavaScript类型系统的问题
 + 是JavaScript的超集（扩展集）
 + 在javaScript之上，多了一些类型系统和es6新特性的支持，最终会被编译为原始的javaScript
-### 概述
+## 概述
 + 强类型与弱类型
   + 安全层面 
   + 强类型有更强的类型约束，而弱类型几乎没有什么约束
@@ -29,7 +29,7 @@ tagline: 持续更新
   + javascript的类型的检查器
 + TypeScript语言规范与基本应用
 
-### Flow 检测代码中的问题
+## Flow 检测代码中的问题
   + 数组类型
     ```javascript
       //  全部由数组组成的数组
@@ -95,10 +95,10 @@ tagline: 持续更新
     passAny(100)
 
     ```
-### TypeScript JavaScript的超集(superset) 前端领域的第二语言，
+## TypeScript JavaScript的超集(superset) 前端领域的第二语言，
     缺点：语言本身多了很多概念
     TypeScript 属于 渐进式
-#### TypeScript 原始数据类型
+### TypeScript 原始数据类型
 ```javascript
   const a: string = 'foobar'
   const b: number = 100 // NaN Infinity
@@ -111,7 +111,7 @@ tagline: 持续更新
   // 作用域 添加
   export {}
 ``` 
-#### Object类型
+### Object类型
 ```javascript
   export {} // 确保跟其他示例没有冲突
 
@@ -120,7 +120,7 @@ tagline: 持续更新
   const obj: { foo: numnber, bar: string } = { foo: 123, bar: 'string' }
 ```
 
-#### 数组类型
+### 数组类型
 
 ```javascript
   const arr1: Array<number> = [1, 2, 3]
@@ -132,7 +132,7 @@ tagline: 持续更新
   sum(1, 2, 3)
 ```
 
-#### 元组类型（明确元素数量，以及各个数组的类型的数组）
+### 元组类型（明确元素数量，以及各个数组的类型的数组）
 ```javascript
   export {} // 确保跟其他代码块没有冲突
 
@@ -141,7 +141,7 @@ tagline: 持续更新
 
   const [age, name] = tuple  // 解构去取值
 ```
-#### 枚举类型
+### 枚举类型
   实际开发中，会用到一些数值表示一些方法，比如常用的status 1 2 3 
   表示不同的状态，这是用枚举会方便记录，识别
   ```javascript
@@ -169,7 +169,7 @@ tagline: 持续更新
     // 入侵运行时的代码，编译后不会删除
   ```
   
-#### 函数类型 输入输出做限制
+### 函数类型 输入输出做限制
 
   ```javascript
   // 函数声明
@@ -191,7 +191,7 @@ tagline: 持续更新
   }
   ```
 
-#### 任意类型就(any Types)
+### 任意类型就(any Types)
 
   ```javascript
   // any接受任意类型
@@ -205,7 +205,7 @@ tagline: 持续更新
     // any类型不是安全的
   ```
 
-#### 隐式类型推断
+### 隐式类型推断
   ```javascript
     let age = 19 // 隐式推断为number
     age = 'string' // 会报错
@@ -213,7 +213,7 @@ tagline: 持续更新
     // 建议为每个类型去添加类型
   ```
 
-#### 类型断言
+### 类型断言
   ```javascript
   // 嘉定这个nums来自一个明确的接口
     const nums = [112, 123, 342]
@@ -224,7 +224,7 @@ tagline: 持续更新
 
   ```
 
-#### 接口 interfaces (契约)
+### 接口 interfaces (契约)
   用来约束一个对象的结构，一个对象去实现一个接口，就必须拥有接口中所约束的所有成员
   ```ts
   interface Post {
@@ -253,7 +253,7 @@ tagline: 持续更新
   cache.foo = 'value'
   ```
 
-#### 类 
+### 类 
   + 用来描述一类事物的抽象特征
   ```ts
   class Person {
@@ -337,7 +337,7 @@ tagline: 持续更新
     d.run(100)
   ```
 
-#### 泛型 Generics
+### 泛型 Generics
 ```ts
 const hello = (name: string) => {
   console.log(`hello,${name}`)
@@ -369,7 +369,7 @@ const res = creatNumberArray(3, 100)
  
 ```
 
-#### 类型声明 Type Declaration
+### 类型声明 Type Declaration
   引入第三方模块，当不包含时，就尝试安装一个类型声明模块
 ```ts
   // 一个函数在使用的时候没有函数声明，我们在用的是偶在单独做一个函数声明
