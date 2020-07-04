@@ -50,10 +50,12 @@ module.exports = resolve({
           ['/components/engineering/', '前端工程化'],
           ['/components/engineering/scaffold.md', '脚手架工具'],
           ['/components/engineering/yeoman.md', 'yeoman使用'],
+          ['/components/engineering/gulp.md', 'gulp'],
         ]
       },
       {
-        title: '面试题整理',   // 必要的
+        title: '干翻面试官',   // 必要的
+        path: '/components/question/', 
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 3,    // 可选的, 默认值是 1
         children: [
