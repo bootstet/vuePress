@@ -61,6 +61,7 @@ module.exports = resolve({
         children: [
           ['/components/question/proAndAsync.md', '异步|函数编程'],
           ['/components/question/tsAndEs6.md', 'Es6|ts'],
+          ['/components/question/assign.md', '理解赋值表达式'],
         ]
       },
       {
