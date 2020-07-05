@@ -54,7 +54,7 @@ module.exports = resolve({
         ]
       },
       {
-        title: '干翻面试官',   // 必要的
+        title: '面试题',   // 必要的
         path: '/components/question/', 
         collapsable: true, // 可选的, 默认值是 true,
         sidebarDepth: 3,    // 可选的, 默认值是 1
