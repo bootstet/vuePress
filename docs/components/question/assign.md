@@ -19,9 +19,9 @@
     >+ 此时运算执行完毕，最终 a 是 { n: 2 }   b是 { n: 1, x: { n: 2 } }
 
   分析图
-  ![堆栈分析图](./assign1.png)
+  ![堆栈分析图](./image/assign1.png)
 
-  ![console分析图](./assign2.png)
+  ![console分析图](./image/assign2.png)
 
   ----------
 
