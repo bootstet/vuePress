@@ -42,7 +42,7 @@ module.exports = [
       ['/components/question/tsAndEs6.md', 'Es6|ts'],
       ['/components/question/assign.md', '理解赋值表达式'],
       ['/components/question/engineering.md', '工程化及gulp创建项目'],
-      ['/components/question/wepack.md', 'webpack'],
+      ['/components/question/webpack.md', 'webpack'],
     ]
   },
   {
