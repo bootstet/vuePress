@@ -33,6 +33,16 @@ module.exports = [
     ]
   },
   {
+    title: 'vue',
+    collapsable: true, 
+    sidebarDepth: 3,
+    children: [
+      ['./components/vue/vueBase', 'vue基础'],
+      ['./components/vue/virtualDom', '虚拟dom'],
+      ['./components/vue/notes/Vue基础回顾.pdf', '老师笔记'],
+    ]
+  },
+  {
     title: '面试题',   // 必要的
     path: '/components/question/', 
     collapsable: true, // 可选的, 默认值是 true,

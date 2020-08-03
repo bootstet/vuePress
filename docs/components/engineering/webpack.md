@@ -127,3 +127,9 @@
         // do something
       })
   ```
+
+## externals 加载外部包
+
+## 常用网站
+`www.babeljs.cn`
+browserList
