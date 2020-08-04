@@ -53,6 +53,7 @@ module.exports = [
       ['/components/question/assign.md', '理解赋值表达式'],
       ['/components/question/engineering.md', '工程化及gulp创建项目'],
       ['/components/question/webpack.md', 'webpack'],
+      ['/components/question/vueVirtualdom.md', 'vue虚拟dom'],
     ]
   },
   {
