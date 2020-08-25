@@ -35,7 +35,12 @@
 + mounted 实例被挂载后调用
 + updated 数据更改调用
 + destroyed 实例销毁后调用，所有的指令都被解绑，所有的事件监听器被移除，所有的子实例被销毁
-
+```js
+  初始化事件，生命周期相关的成员
+                  ||
+   beforeCreate   ||
+    将data
+```
 
 #### 语法和基础概念  v-为前缀
   + 插值表达式  {{}}
@@ -61,7 +66,7 @@
 #### Class和Style绑定
 + 对象语法
   ```js
-    <div v-bund:class = "{ active: isActive }"></div>
+    <div v-bund:class = "{ active: isActive }"></div> 
   ```
 
 
