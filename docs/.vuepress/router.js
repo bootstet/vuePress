@@ -42,8 +42,8 @@ module.exports = [
       ['./components/vue/virtualDom', '虚拟dom'],
       ['./components/vue/notes/Vue基础回顾.pdf', '老师笔记'],
       ['./components/vue/vuex.md', 'vuex'],
-      ['./components/vue/nuxt基础.md', 'vuex基础'],
-      ['./components/vue/nuxt综合案例.md', 'vuex综合案例'],
+      ['./components/vue/nuxt基础.md', 'nuxt基础'],
+      ['./components/vue/nuxt综合案例.md', 'nuxt综合案例'],
     ]
   },
   {

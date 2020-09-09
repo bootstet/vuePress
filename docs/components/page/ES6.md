@@ -188,14 +188,14 @@ const person = {
 
 const personProxy = new Proxy(person, {
     get(target, property){
-        return property in target ? target[property] : 'default'
+      return property in target ? target[property] : 'default'
     },
     set(target, property, value){
-        if(property === 'age'){
-            if(!Number.isInteger(value)){
-                throw new TypeError(`${value} is not an int`)
-            }
+      if(property === 'age'){
+        if(!Number.isInteger(value)){
+            throw new TypeError(`${value} is not an int`)
         }
+      }
     console.log(target, property, value)
     }
 })

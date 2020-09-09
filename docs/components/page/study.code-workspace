@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../../10_interview/github-code/teach"
+		},
+		{
+			"path": "../../../../../10_interview/code/vue-code/vue"
+		},
+		{
+			"path": "../../../../../10_interview/code/vue-code/vue-cli"
+		},
+		{
+			"path": "../../../../../10_interview/code/vue-study"
+		},
+		{
+			"path": "../../../../../10_interview/code/vue-code/vuex-cart-demo"
+		},
+		{
+			"path": "../../../../../10_interview/code/vue-code"
+		},
+		{
+			"path": "../../../../../10_interview/code/vue-code/realworld-nuxtjs"
+		},
+		{
+			"path": "../../../../../10_interview/code"
+		}
+	],
+	"settings": {}
+}
