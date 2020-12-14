@@ -25,12 +25,12 @@ let str='521Symbol卢2121';//自恋一下，哈哈😄
 //let regExp=new RegExp('[0-9]+','g');
 let regExp =/[0-9]+/g;
 //再回顾一下，加深印象  math 方法以数组的形式返回  满足正则表达式匹配的内容
-console.log(str.match(regExp));
+// console.log(str.match(regExp));
 //结果为["521", "2121"]
 
 let str1 = '123jkhlk12ljjbh34lkj12'
 let regExp1 = /12{1,5}/g
-console.log(str1.match(regExp1))
+// console.log(str1.match(regExp1))
 
 let phone = '13243433434'
 // let phoneReg = /^1[3456789]\d{9}/g
@@ -53,12 +53,12 @@ let emailText = 'zhoudf@hua-cloud.com.cn'
 let emailText1 = 'zhoudf@hua-cloud.com'
 let emailText2 = 'zhoudf@huacloud.com'
 let emailReg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9-_.]+\.([a-zA-Z]{2,4})$/
-console.log(emailReg.test(emailText))
-console.log(emailReg.test(emailText1))
-console.log(emailReg.test(emailText2))
 
 let abcReg = /^\?_\d{4}|^\d{4}_$/g
 
-console.log(/(^_[0-9]{4}|^\d{4}_$){0}/.test('3333'))
+// console.log(/(^_[0-9]{4}|^\d{4}_$){0}/.test('3333'))
 
-console.log(/(^[^3])/.test('12'))
+// console.log(/(^[^3])/.test('12'))
+
+console.log(!/[\u4e00-\u9fa5。，、]/.test('sdfas.d..,.dfsf，'))
+console.log(/\w+/.test('dfasfdhk  ..。。大沙雕'))

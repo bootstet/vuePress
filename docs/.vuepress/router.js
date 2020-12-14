@@ -40,10 +40,20 @@ module.exports = [
     children: [
       ['./components/vue/vueBase', 'vue基础'],
       ['./components/vue/virtualDom', '虚拟dom'],
-      ['./components/vue/notes/Vue基础回顾.pdf', '老师笔记'],
+      // ['./components/vue/notes/Vue基础回顾.pdf', '老师笔记'],
       ['./components/vue/vuex.md', 'vuex'],
       ['./components/vue/nuxt基础.md', 'nuxt基础'],
       ['./components/vue/nuxt综合案例.md', 'nuxt综合案例'],
+    ]
+  },
+  {
+    title: 'react',
+    collapsable: true,
+    idebarDepth: 5,
+    children: [
+      ['./components/react/basics1.md', 'react基础回顾'],
+      ['./components/react/virtualDOM.md', 'Virtual DOM 及 Diff算法'],
+      ['./components/react/fiber1.md', 'fiber'],
     ]
   },
   {
@@ -84,7 +94,7 @@ module.exports = [
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2, 
     children: [ 
-      ['/components/page2/', '占位目录的']
+      // ['/components/page2/', '占位目录的']
     ]
   }
 ]
