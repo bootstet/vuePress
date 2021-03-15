@@ -128,7 +128,7 @@ class LaserWriter {
     var canvas2 = document.getElementById(canvas2Id);
     this.ctx = canvas.getContext("2d");
     this.ctx2 = canvas2.getContext("2d");
-    this.w = canvas.width = canvas2.width = 900;
+    this.w = canvas.width = canvas2.width = 600;
     this.h = canvas.height = canvas2.height = 500;
     this.tick = 0;
     this.pointsIndex = 0;
@@ -147,8 +147,8 @@ class LaserWriter {
     // Draw black text on the canvas temporarily
     this.startX = (this.w - this.ctx.measureText(text).width*3) * 0.5;
     this.ctx.fillText(text, 1, 100);
-    var width = 500;
-    var height = 300;
+    var width = 300;
+    var height = 200;
     var image = this.ctx.getImageData(0, 0, width, height);
     var buffer32 = new Uint32Array(image.data.buffer);
     for(var x = 0; x < width; x++) {
@@ -245,7 +245,7 @@ class LaserWriter {
 }
 
 var laserWriter = new LaserWriter("canvas", "canvas2");
-laserWriter.init("刘倩", 100);
+laserWriter.init("杨莹婕", 40);
 laserWriter.draw();
 
   </script>

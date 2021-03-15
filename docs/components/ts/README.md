@@ -223,6 +223,15 @@ tagline: 持续更新
     const num2 = <number>res   // 等价于上面的as写法  （jsx下不能使用）
 
   ```
+  #### 非空断言
+  ```ts
+    function myFunc(maybeString: string | undefined | null) {
+      // Type 'string | null | undefined' is not assignable to type 'string'.
+      // Type 'undefined' is not assignable to type 'string'. 
+      const onlyString: string = maybeString; // Error
+      const ignoreUndefinedAndNull: string = maybeString!; // Ok
+    }
+  ```
 
 ### 接口 interfaces (契约)
   用来约束一个对象的结构，一个对象去实现一个接口，就必须拥有接口中所约束的所有成员
