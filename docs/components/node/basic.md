@@ -232,7 +232,7 @@
 + 代码层面上fs氛围基本操作类和常用API
 + 权限位、标识符、文件描述
 
-![Alt](../../.vuepress/dist/node/fs.png)
+<!-- ![Alt](../../.vuepress/dist/node/fs.png) -->
   ##### 1、Fs模块结构
   + FS 基本操作类
   + FS 常用 API
@@ -243,10 +243,10 @@
     r 4 读
     w 2 写
     x 1 执行
-    ![Alt](../../.vuepress/dist/node/rwx.png)
+    <!-- ![Alt](../../.vuepress/dist/node/rwx.png) -->
     
     
-    ![Alt](../../.vuepress/dist/node/drwx.png)
+    <!-- ![Alt](../../.vuepress/dist/node/drwx.png) -->
 
     + flag表示对文件操作方式
       - r:表示可读

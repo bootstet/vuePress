@@ -39,7 +39,7 @@
     - TCP 是面向链接的协议
     - TCP 用于处理实时通信
     - tcp完整报文信息
-     ![Alt](../../.vuepress/dist/node/tcp.png)
+     <!-- ![Alt](../../.vuepress/dist/node/tcp.png) -->
 
     - 常见控制字段
       + SYN = 1 表示请求建立链接

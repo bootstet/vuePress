@@ -6,7 +6,8 @@ module.exports = resolve({
     ['link', {rel: 'icon', href: '/public/avatar.jpg'}]
   ],
   description: '用心写代码，不辜负程序员之名',  // 
-  base: '/boke/',
+  // base: '/boke/',
+  base: '/',
   markdown: {
     lineNumbers: false      // 代码块显示行号
   },
