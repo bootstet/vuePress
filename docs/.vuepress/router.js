@@ -58,6 +58,16 @@ module.exports = [
     ]
   },
   {
+    title: 'node',
+    collapsable: true,
+    idebarDepth: 5,
+    children: [
+      ['./components/node/basic.md', 'node核心'],
+      ['./components/node/communication.md', '网络通信'],
+      ['./components/node/module.md', 'node模块化（未完）'],
+    ]
+  },
+  {
     title: '面试题',   // 必要的
     path: '/components/question/', 
     collapsable: true, // 可选的, 默认值是 true,
@@ -78,6 +88,7 @@ module.exports = [
     sidebarDepth: 3,    // 可选的, 默认值是 1
     children: [
       ['/components/article/bokeinit.md', '个人博客搭建步骤记录'],
+      ['/components/article/npmTool.md', 'cyzserver静态服务npm工具包'],
     ]
   },
   {
