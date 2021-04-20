@@ -1,5 +1,5 @@
 ### this指向
-this指向不取决与定义，不取决于函数的声明，取决于谁调用的
+this指向不取决于定义，不取决于函数的声明，取决于谁调用的
 ```javascript
   const obj1 = {
     foo: function () {

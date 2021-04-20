@@ -6,8 +6,8 @@ module.exports = resolve({
     ['link', {rel: 'icon', href: '/public/avatar.jpg'}]
   ],
   description: '用心写代码，不辜负程序员之名',  // 
-  // base: '/boke/',
-  base: '/',
+  base: '/boke/', // github 上配置
+  // base: '/', // nginx 上配置
   markdown: {
     lineNumbers: false      // 代码块显示行号
   },
@@ -24,6 +24,7 @@ module.exports = resolve({
     ],
     sidebar: routerPath,
     sidebarDepth: 2,   
+    lastUpdated: 'Last Updated', // string | boolean
   },
   // theme: 'ting'
   theme: 'hope',

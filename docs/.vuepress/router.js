@@ -10,6 +10,8 @@ module.exports = [
       ['/components/page/ES6.md', 'ES新特性'],
       ['/components/page/optimization.md', 'js性能优化'],
       ['/components/page/this.md', 'this'],
+      ['/components/page/prototype.md', 'JavaScript基础 - 原型和原型链'],
+      ['/components/page/callBindApply.md', 'JavaScript基础 - call apply'],
     ]
   },
   {

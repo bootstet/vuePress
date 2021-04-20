@@ -37,4 +37,5 @@ actionLink: /components/page/
 
 ###### 一切的瞎折腾，只为一个大厂梦，兴许那天就实现了呢
 ###### Don`t repeat yourself.
+###### wx: bootstet
 <!-- ###### 另外也为了不必去低声附和那些看不惯你和你看不惯的人 -->

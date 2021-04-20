@@ -217,25 +217,23 @@ console.log(r)
 + 闭包： 函数和其周围的状态的引用捆绑在一起形成闭包。
 
     + 可以在另一个作用域中调用一个函数的内部函数并访问到该函数的作用域中的成员
+    > 和 makefn 相同作用域中的 fn 调用了 makefn 中的内部函数，访问了makefn函数作用域中的成员，函数中的msg调用完以后不会被释放，因为外部对它有引用 
 
 ```javascript
-
-function makeFn () {
-    let msg = 'Hello function'
-    return function () {
-        console.log(msg)
+    function makeFn () {
+        let msg = 'Hello function'
+        return function () {
+            console.log(msg)
+        }
     }
-}
-
-const fn = makeFn()
-fn()
-
+    const fn = makeFn()
+    fn()
 
 ```
 
 ```javascript
 
-// once
+// once done变量在被调用以后，不会被释放，所以再次调用时可以用作来判断函数要不要在执行 
 function once (fn) {
     let done = false
     return function () {
@@ -255,6 +253,7 @@ pay(5)
 ```
 
 + 闭包的本质： 函数在执行的时候会放到一直执行栈上当函数执行完毕之后会从执行栈上移除，**但是堆上的作用域成员因为被外部引用不能释放**，因此内部函数依然可以访问外部函数的成员
+    once中的函数被调用完以后，外部对函数内部的变量有引用，所以不会被释放，因此下次在调用时依然可以访问到。
 + **闭包特点：**
       外部具有指向内部的引用
       在外部作用域访问内部作用域的数据
