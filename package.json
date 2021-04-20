@@ -19,6 +19,7 @@
     "webpack-dev-middleware": "3.6.0"
   },
   "dependencies": {
+    "moment": "^2.29.1",
     "vuepress-theme-ting": "^2.0.2"
   }
 }

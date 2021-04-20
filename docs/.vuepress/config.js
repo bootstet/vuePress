@@ -33,5 +33,18 @@ module.exports = resolve({
     appId: "fMKJ3bvqjtFeR7XC6iFjTDAD-gzGzoHsz", // your appId
     appKey: "fRTygayrq0HLV9zaHLQNwugg", // your appKey
   },
-  plugin: ["@mr-hope/comment", {}],
+  plugin:[
+    ["@mr-hope/comment", {}],
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp, lang) => {
+          // 不要忘了安装 moment
+          const moment = require('moment')
+          moment.locale(lang)
+          return moment(timestamp).fromNow()
+        }
+      }
+    ]
+  ] ,
 })
