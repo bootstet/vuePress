@@ -45,6 +45,18 @@ module.exports = resolve({
           return moment(timestamp).fromNow()
         }
       }
+    ],
+    [
+      'vuepress-plugin-comment',
+      {
+        choosen: 'valine', 
+        // options选项中的所有参数，会传给Valine的配置
+        options: {
+          el: '#valine-vuepress-comment',
+          appId: '8LRe8LPTMKcXRMT95r4CdP1l-gzGzoHsz',
+          appKey: 'OFvcKNNRElWjSltaK5jgvcTL'
+        }
+      }
     ]
   ] ,
 })
