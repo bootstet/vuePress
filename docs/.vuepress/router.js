@@ -6,7 +6,7 @@ module.exports = [
     sidebarDepth: 3,    // 可选的, 默认值是 1
     children: [
       ['/components/page/funPro.md', '函数式编程'],
-      ['/components/page/myProasyncPromise.md', 'JavaScript异步编程'],
+      ['/components/page/asyncPro.md', 'JavaScript异步编程'],
       ['/components/page/myPromise.md', 'JavaScript异步 - 手写promise'],
       ['/components/page/ES6.md', 'ES新特性'],
       ['/components/page/optimization.md', 'js性能优化'],

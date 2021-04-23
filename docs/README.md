@@ -19,6 +19,11 @@ actionLink: /components/page/
   <!-- 我是小陈 -->
 
   <!-- #####         本着三天打渔，两天晒网的学习精神，之前的笔记记的很零散，为知笔记，github，手机备忘录，甚至A4纸上也有记录过，时间一久，写哪自己都忘了。所以搭建一个自己的站点（现成的框架，按文档来即可）。不用在去充会员，登账号密码，便于自己记录，复习。佛系更新法，内容包含但不限于自己对前端的一些认识、知识点、面试题，想起什么更什么... -->
+   <!-- ![Alt](./components/page/image/pig.jpeg) -->
+  <!-- <div align="center">
+     <img src="./components/page/image/pig.jpeg" width = "600" height = "auto" alt="图片名称" align=center />
+  </div> -->
+   
   ##### 平时开发记录
   ##### 前端方面计划的学习路径：js基础，js进阶，ts，工程搭建，vue和react源码分析，node。
   ##### 进展跟随目录菜单更新（2020.5.28）
@@ -34,8 +39,12 @@ actionLink: /components/page/
 >+ #### [面试题](components/question/proAndAsync.md)
 >+ ##### [随笔](components/gnosis)
 
+  <div align="center">
+     <img src="./components/page/image/pig.jpeg" width = "600" height = "auto" alt="图片名称" align=center />
+  </div>
 
-###### 一切的瞎折腾，只为一个大厂梦，兴许那天就实现了呢
+
+<!-- ###### 一切的瞎折腾，只为一个大厂梦，兴许那天就实现了呢 -->
 ###### Don`t repeat yourself.
 ###### wx: bootstet
 <!-- ###### 另外也为了不必去低声附和那些看不惯你和你看不惯的人 -->
