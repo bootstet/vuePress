@@ -16,11 +16,12 @@ module.exports = [
     ]
   },
   {
-    title: 'typeScript',   // 必要的
+    title: '前端学习记录',   // 必要的
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 3,    // 可选的, 默认值是 1
     children: [
       ['/components/ts/', 'typeScript'],
+      ['/components/question/design.md', 'JavaScript设计模式'],
     ]
   },
   {
