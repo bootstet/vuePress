@@ -25,14 +25,18 @@ module.exports = resolve({
     sidebar: routerPath,
     sidebarDepth: 2,   
     lastUpdated: 'Last Updated', // string | boolean
+    comment: {
+      type: "valine", // "valine" 或 "vssue"
+      // valine 模式下
+      appId: "8LRe8LPTMKcXRMT95r4CdP1l-gzGzoHsz", // your appId
+      appKey: "OFvcKNNRElWjSltaK5jgvcTL", // your appKey
+    },
+    foot: {
+      display: true
+    }
   },
   // theme: 'ting'
   theme: 'hope',
-  comment: {
-    type: "valine", // 使用 Valine
-    appId: "fMKJ3bvqjtFeR7XC6iFjTDAD-gzGzoHsz", // your appId
-    appKey: "fRTygayrq0HLV9zaHLQNwugg", // your appKey
-  },
   plugin:[
     ["@mr-hope/comment", {}],
     [
@@ -46,17 +50,5 @@ module.exports = resolve({
         }
       }
     ],
-    [
-      'vuepress-plugin-comment',
-      {
-        choosen: 'valine', 
-        // options选项中的所有参数，会传给Valine的配置
-        options: {
-          el: '#valine-vuepress-comment',
-          appId: '8LRe8LPTMKcXRMT95r4CdP1l-gzGzoHsz',
-          appKey: 'OFvcKNNRElWjSltaK5jgvcTL'
-        }
-      }
-    ]
   ] ,
 })

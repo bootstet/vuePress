@@ -5,6 +5,10 @@ home: true
 # tagline: Hero 副标题
 actionText: 随便看看 →
 actionLink: /components/page/
+footer: <div><a href="http://beian.miit.gov.cn/" target="_blank"> 备案号</a> | <a href="/about/site/">关于网站</a></div>
+copyrightText: false
+# copyrightText: MIT LICENSE
+# medialink:  Zhihu: https://zhihu.com
 # features:
 # - title: 简洁至上
 #   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
@@ -28,7 +32,7 @@ actionLink: /components/page/
   ##### 前端方面计划的学习路径：js基础，js进阶，ts，工程搭建，vue和react源码分析，node。
   ##### 进展跟随目录菜单更新（2020.5.28）
   ##### 文章采用markdown格式书写，所有源码都放在github仓库中
-  ##### 博客评论功能待开发中..
+  ##### vuePress-theme-home  valine 评论功能
     
 **快速跳转**
 
@@ -40,7 +44,7 @@ actionLink: /components/page/
 >+ ##### [随笔](components/gnosis)
 
   <div align="center">
-     <img src="./components/page/image/pig.jpeg" width = "600" height = "auto" alt="图片名称" align=center />
+     <!-- <img src="./components/pa ge/image/pig.jpeg" width = "600" height = "auto" alt="图片名称" align=center /> -->
   </div>
 
 
