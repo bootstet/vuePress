@@ -6,7 +6,7 @@ home: true
 actionText: 随便看看 →
 actionLink: /components/page/
 footer: <div><a href="http://beian.miit.gov.cn/" target="_blank"> 备案号</a> | <a href="/about/site/">关于网站</a></div>
-copyrightText: false
+# copyrightText: false
 # copyrightText: MIT LICENSE
 # medialink:  Zhihu: https://zhihu.com
 # features:
@@ -43,9 +43,9 @@ copyrightText: false
 >+ #### [面试题](components/question/proAndAsync.md)
 >+ ##### [随笔](components/gnosis)
 
-  <div align="center">
+  <!-- <div align="center"> -->
      <!-- <img src="./components/pa ge/image/pig.jpeg" width = "600" height = "auto" alt="图片名称" align=center /> -->
-  </div>
+  <!-- </div> -->
 
 
 <!-- ###### 一切的瞎折腾，只为一个大厂梦，兴许那天就实现了呢 -->

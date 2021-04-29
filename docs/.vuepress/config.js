@@ -27,13 +27,9 @@ module.exports = resolve({
     lastUpdated: 'Last Updated', // string | boolean
     comment: {
       type: "valine", // "valine" 或 "vssue"
-      // valine 模式下
       appId: "8LRe8LPTMKcXRMT95r4CdP1l-gzGzoHsz", // your appId
       appKey: "OFvcKNNRElWjSltaK5jgvcTL", // your appKey
     },
-    foot: {
-      display: true
-    }
   },
   // theme: 'ting'
   theme: 'hope',
