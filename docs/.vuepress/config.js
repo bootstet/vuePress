@@ -34,7 +34,11 @@ module.exports = resolve({
   // theme: 'ting'
   theme: 'hope',
   plugin:[
-    ["@mr-hope/comment", {}],
+    // ["@mr-hope/comment", {
+    //   type: "valine", // "valine" 或 "vssue"
+    //   appId: "8LRe8LPTMKcXRMT95r4CdP1l-gzGzoHsz", // your appId
+    //   appKey: "OFvcKNNRElWjSltaK5jgvcTL", // your appKey
+    // }],
     [
       '@vuepress/last-updated',
       {
