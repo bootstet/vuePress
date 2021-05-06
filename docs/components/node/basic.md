@@ -187,6 +187,21 @@
     ```
 
 #### 4、Buffer 是 Nodejs 的内置类
+  是除process外的另一个重要的全局变量，Buffer缓冲区
+  Buffer 让 Javascript可以操作二进制
+  Buffer是什么？在哪？做什么？
+  Nodejs平台下Javascript可实现IO，IO行为操作的就是二进制数据
+  Stream 流操作并非 Nodejs 独创
+  流操作配合管道实现数据分段传输
+  数据的端到端传输会有生产者和消费者
+
+  nodejs 中 buffer 是一片内存空间
+  + node下的一个全局变量
+  + 实现Nodejs平台下的二进制数据操作
+  + 不占据V8堆内存大小的内存空间
+  + 内存的使用由Node来控制，由V8的GC回收
+  + 一般配合 Stream 流只用，充当数据缓存区
+
 
   ##### 1、创建Bugger实例
   + alloc： 创建指定字节大小的buffer
@@ -208,7 +223,7 @@
 
   ##### 3、Buffer 静态方法
   + concat: 将多个buffer拼接成一个新的buffer
-  + idBuffer： 判断当前数据是否为 buffer 
+  + isBuffer： 判断当前数据是否为 buffer 
 
   ##### 4、自定义 Buffer 值 split
     ```js

@@ -83,6 +83,7 @@ module.exports = [
       ['/components/question/engineering.md', '工程化及gulp创建项目'],
       ['/components/question/webpack.md', 'webpack'],
       ['/components/question/vueVirtualdom.md', 'vue虚拟dom'],
+      ['/components/question/node.md', 'nodejs高级编程'],
     ]
   },
   {
