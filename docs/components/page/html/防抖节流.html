@@ -14,8 +14,9 @@
     console.log(document.documentElement.scrollTop)
   }
 
-  window.addEventListener('scroll', debouce(getScrollTop, 1000))
+  window.addEventListener('scroll', throttle(getScrollTop, 1000))
 
+  // 节流
   function throttle (fn, time) {
     let canRun = true
     return function () {
@@ -27,7 +28,7 @@
       }, time)
     }
   }
-
+  // 防抖
   function debouce (fn, time) {
     let timer = null
     return function () {

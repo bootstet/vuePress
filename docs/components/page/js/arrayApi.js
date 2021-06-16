@@ -36,6 +36,19 @@ const some = (array, fn) => {
 let someArr = [1, 2, 3, 5, 7, 9]
 console.log(some(someArr, v => v % 2 === 1))
 
+// every
+const every = (array, fn) => {
+	let result = true
+	for (let value of array) {
+		result = fn(value)
+		if (!result) {
+			break
+		}
+	}
+	return result
+}
+console.log(every(someArr, v => v % 2 === 1))
+
 // map
 const map = (array, fn) => {
 	let result = []

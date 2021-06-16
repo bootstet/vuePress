@@ -5,7 +5,7 @@ home: true
 # tagline: Hero 副标题
 actionText: 随便看看 →
 actionLink: /components/page/
-footer: <div><a href="http://beian.miit.gov.cn/" target="_blank"> 备案号</a> | <a href="/about/site/">关于网站</a></div>
+footer: <div><a href="http://beian.miit.gov.cn/" target="_blank"> 备案号 粤ICP备2021022849号-1</a> </div>
 # copyrightText: false
 # copyrightText: MIT LICENSE
 # medialink:  Zhihu: https://zhihu.com
@@ -44,7 +44,6 @@ footer: <div><a href="http://beian.miit.gov.cn/" target="_blank"> 备案号</a> 
 >+ ##### [随笔](components/gnosis)
 
   <!-- <div align="center"> -->
-     <!-- <img src="./components/pa ge/image/pig.jpeg" width = "600" height = "auto" alt="图片名称" align=center /> -->
   <!-- </div> -->
 
 

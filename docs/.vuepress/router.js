@@ -59,6 +59,8 @@ module.exports = [
       ['./components/react/virtualDOM.md', 'Virtual DOM 及 Diff算法'],
       ['./components/react/fiber1.md', 'fiber'],
       ['./components/react/React-code.md', 'react 源码解析'],
+      ['./components/react/redux.md', 'redux'],
+      ['./components/react/hooks.md', 'hooks'],
     ]
   },
   {
