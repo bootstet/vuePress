@@ -231,7 +231,7 @@ tagline: 持续更新
       const onlyString: string = maybeString; // Error
       const ignoreUndefinedAndNull: string = maybeString!; // Ok
     }
-  ```
+  ``` 
 
 ### 接口 interfaces (契约)
   用来约束一个对象的结构，一个对象去实现一个接口，就必须拥有接口中所约束的所有成员
@@ -263,7 +263,7 @@ tagline: 持续更新
   ```
 
 ### 类 
-  + 用来描述一类事物的抽象特征
+  + 用来描述一类具体事物的抽象特征
   ```ts
   class Person {
     public name: string = 'init name'
@@ -313,6 +313,7 @@ tagline: 持续更新
     interface Eat {
       run (distance: number): void 
     }
+    // implements 用接口对类进行抽象
 
     class Person implements Eat, Run {
       eat (food: string): void {
@@ -340,6 +341,12 @@ tagline: 持续更新
       }
       abstract run (distance: number): void
     }
+
+    class Dog extends Animal{
+      run(distance: number): void {
+        console.log('四角爬行', distance)
+      }
+    } 
 
     const d = new Dog()
     d.eat('enxima')
@@ -373,9 +380,38 @@ function creatArray<T> (length: number, value: T): T[] {
 
 
 const res = creatNumberArray(3, 100)
+const createArray<string>(3, 100)
 
 // res => [100, 100, 100]
  
+```
+泛型变量
+如果我们想同时打印出arg的长度。 我们很可能会这样做：
+```js
+  function loggingIdentity<T>(arg: T): T {
+    console.log(arg.length);  // Error: T doesn't have .length
+    return arg;
+  }
+```
+如果这么做，编译器会报错说我们使用了arg的.length属性，但是没有地方指明arg具有这个属性。 记住，这些类型变量代表的是任意类型，所以使用这个函数的人可能传入的是个数字，而数字是没有.length属性的。
+
+现在假设我们想操作T类型的数组而不直接是T。由于我们操作的是数组，所以.length属性是应该存在的。 我们可以像创建其它数组一样创建这个数组：
+```js
+
+  function loggingIdentity<T>(arg: T[]): T[] {
+    console.log(arg.length);  // Array has a .length, so no more error
+    return arg;
+}
+```
+你可以这样理解loggingIdentity的类型：泛型函数loggingIdentity，接收类型参数T和参数arg，它是个元素类型是T的数组，并返回元素类型是T的数组。 如果我们传入数字数组，将返回一个数字数组，因为此时T的的类型为number。 这可以让我们把泛型变量T当做类型的一部分使用，而不是整个类型，增加了灵活性。
+
+我们也可以这样实现上面的例子：
+```js
+
+function loggingIdentity<T>(arg: Array<T>): Array<T> {
+    console.log(arg.length);  // Array has a .length, so no more error
+    return arg;
+}
 ```
 
 ### 类型声明 Type Declaration
@@ -388,3 +424,69 @@ const res = creatNumberArray(3, 100)
 
   const res = camelCase('hello, typed')
 ```
+
+### infer
+```ts
+export {}
+interface Foo {
+  name: string,
+  age: number
+}
+
+type P = '12' | '233' | 'sdf'
+interface D {
+  P: '12' | '233' | 'sdf'
+}
+
+let type: D["P"] = '12'
+
+// const obj: T = {
+//   name: 'fds'
+//   // age: 2,
+// }
+
+const b: T = "age"
+const c: T = "name"
+// const d: T = 123
+
+type T = keyof Foo
+
+type Obj = {
+  [p in T]: any // ==> { name: any, age: any }
+}
+const aa: Obj = { "name": 1, age: 2}
+const bb: Obj = { name: 1, age: 2}
+
+// keyof 产生联合类型, in 则可以遍历枚举类型, 所以他们经常一起使用, 看下 Partial 源码
+
+type Partial<D> = { [P in keyof D]?: D[P] }
+
+const cc: Partial<Foo> = {
+  name: "345",
+  age: 18
+}
+
+interface User {
+  name: string
+  age: number
+}
+//infer 最早出现在此 PR 中，表示在 extends 条件语句中待推断的类型变量。
+
+type ParamType<T> = T extends (...args: infer P) => any ? P : T;
+
+// 在这个条件语句 T extends (...args: infer P) => any ? P : T 中，infer P 表示待推断的函数参数。
+
+// 整句表示为：如果 T 能赋值给 (...args: infer P) => any，则结果是 (...args: infer P) => any 类型中的参数 P，否则返回为 T。
+
+type Func = (user: User) => void
+
+type Param = ParamType<Func> // Param = User
+type AA = ParamType<string>; // string
+
+```
+
+## 小技巧
++ 显示中文错误消息 ,以中文方式显示错误消息
+  ```
+    yarn tsc --locale zh-CN  
+  ```

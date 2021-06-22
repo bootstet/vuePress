@@ -5,7 +5,7 @@ home: true
 # tagline: Hero 副标题
 actionText: 随便看看 →
 actionLink: /components/page/
-footer: <div><a href="http://beian.miit.gov.cn/" target="_blank"> 备案号 粤ICP备2021022849号-1</a> </div>
+footer: <div><a href="http://beian.miit.gov.cn/" target="_blank"> 备案号 粤ICP备2021022849号</a> </div>
 # copyrightText: false
 copyrightText: MIT LICENSE
 # medialink:  'Zhihu: https://zhihu.com'
