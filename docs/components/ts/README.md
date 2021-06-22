@@ -466,6 +466,12 @@ const cc: Partial<Foo> = {
   age: 18
 }
 
+
+
+```
+
++ 用与提取参数类型
+```ts
 interface User {
   name: string
   age: number
@@ -482,8 +488,46 @@ type Func = (user: User) => void
 
 type Param = ParamType<Func> // Param = User
 type AA = ParamType<string>; // string
+```
+
++ 用于提取函数返回值类型
+```ts
+type ReturnType<T> = T extends (...args: any[]) => infer P ? P : any;
 
 ```
+相比于文章开始给出的示例，ReturnType<T> 只是将 infer P 从参数位置移动到返回值位置，因此此时 P 即是表示待推断的返回值类型。
+```ts
+type Func = () => User;
+type Test = ReturnType<Func>; // Test = User
+```
++ 用于提取构造函数中参数（实例）类型：
+一个构造函数可以使用 new 来实例化，因此它的类型通常表示如下：
+
+```ts
+type Constructor = new (...args: any[]) => any;
+```
+
+当 infer 用于构造函数类型中，可用于参数位置 new (...args: infer P) => any; 和返回值位置 new (...args: any[]) => infer P;。
+
+因此就内置如下两个映射类型
+```ts
+// 获取参数类型
+type ConstructorParameters<T extends new (...args: any[]) => any> = T extends new (...args: infer P) => any
+  ? P
+  : never;
+
+// 获取实例类型
+type InstanceType<T extends new (...args: any[]) => any> = T extends new (...args: any[]) => infer R ? R : any;
+
+class TestClass {
+  constructor(public name: string, public age: number) {}
+}
+
+type Params = ConstructorParameters<typeof TestClass>; // [string, number]
+
+type Instance = InstanceType<typeof TestClass>; // TestClass
+```
+
 
 ## 小技巧
 + 显示中文错误消息 ,以中文方式显示错误消息
