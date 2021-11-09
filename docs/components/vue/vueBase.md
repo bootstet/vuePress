@@ -1,5 +1,5 @@
 # vue 基础
-## [官方文档](https://cn.vuejs.org/v2/guide/)
+### [官方文档](https://cn.vuejs.org/v2/guide/)
 
 
 ### 基础结构
@@ -29,17 +29,54 @@
   }).$mount('#app')   // $mount 方法是把虚拟dom转换为真实dom渲染到浏览器
 
 ```
+##示例代码##
+
+```js
+  <template>
+    <div class="page">
+      .........blog.........
+      <p>公司名称：{{ company.name }} </p>
+      <p>公司地址：{{ company.address }} </p>
+    </div>
+  </template>
+
+  <script type="text/ecmascript-6">
+    export default {
+    data() {
+      return {
+        company: {
+          name: '橄榄枝健康',
+          address: '深圳市南山区软件产业基地'
+        }
+      }
+    }
+    }
+  </script>
+```
 
 #### vue声明周期
+![](./image/vuelifecycle.png)
 + created 在一个实例被创建之后执行代码
 + mounted 实例被挂载后调用
 + updated 数据更改调用
 + destroyed 实例销毁后调用，所有的指令都被解绑，所有的事件监听器被移除，所有的子实例被销毁
 ```js
-  初始化事件，生命周期相关的成员
+  vue实例的过程会发生很多事情，首先会初始化,初始化事件，生命周期相关的成员，包括h函数
                   ||
    beforeCreate   ||
-    将data
+    将data,props,methods注入vue实例上
+                  ||
+                  || 触发created钩子函数，因为已经初始化的data,props,methods，因此这一步可以访问到成员
+                  || vue 创建完毕
+
+                  || el 将模板编译成render函数，是否设置了el选项，没有调用#mount将el转为template，
+                      将模板编译成render函数
+
+                  || 准备挂载dom
+                  || beforeMount  无法获取新元素的内容
+                  ||  挂载dom 将新的元素渲染到页面上
+                  || mounted 访问到新元素的内容，获取新的dom中的结构内容
+                  
 ```
 
 #### 语法和基础概念  v-为前缀
@@ -47,12 +84,13 @@
   + v-html
   + v-once 一次性插值 
   + v-bind 响应式的更新 attribute    缩写为 :
-  + v-for
+  + v-for 
+    不推荐v-for和v-if一起使用，
   + v-on 监听dom事件                缩写为 @
   + v-model 表单输入与应用状态之间的双向绑定
 
 #### 计算属性和侦听器
-  + 基于相应式依赖进行缓存 computed
+  + 基于相应式依赖进行缓存 computed 计算属性会被缓存，在下次使用的时候直接拿出来用，提高性能
   + 方法 methods 每次都会更新
   + 侦听属性  每当数据放生改变，这个函数就会运行
     ```js
@@ -73,17 +111,21 @@
 #### 条件渲染/列表渲染
 + v-if false 不会输出元素
 + v-show 元素会渲染到页面，通过样式控制其隐藏或者显示
-+ v-for  key
++ v-for  key   v-for 和 v-if 不能同级使用
   
 #### 组件
++ 可复用的vue实例，一个组件封装了html、javascript、css，实现一个页面的功能区域，可以无限被复用。
++ element中的组件都是可复用的组件。
 
 #### 插槽
++ 自己写组件的时候会用到，在自定义的组件中挖一个坑，在使用的时候去填坑，让组件更灵活。
 
 #### 插件
 + vue-router
 + vuex
 
 #### 混入 mixin
++ 不同的组件都有相同的选项，那么我们可以把相同的选项进行合并，就可以采用混入的模式，把相同的地方进行重用
 
 #### 深入响应式原理
 

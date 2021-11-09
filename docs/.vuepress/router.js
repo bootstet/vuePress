@@ -5,14 +5,22 @@ module.exports = [
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 3,    // 可选的, 默认值是 1
     children: [
-      ['/components/page/funPro.md', '函数式编程'],
-      ['/components/page/asyncPro.md', 'JavaScript异步编程'],
-      ['/components/page/myPromise.md', 'JavaScript异步 - 手写promise'],
-      ['/components/page/ES6.md', 'ES新特性'],
-      ['/components/page/optimization.md', 'js性能优化'],
-      ['/components/page/this.md', 'this'],
-      ['/components/page/prototype.md', 'JavaScript基础 - 原型和原型链'],
-      ['/components/page/callBindApply.md', 'JavaScript基础 - call apply new'],
+        ['/components/page/funPro.md', '函数式编程'],
+        ['/components/page/asyncPro.md', 'JavaScript异步编程'],
+        ['/components/page/myPromise.md', 'JavaScript异步 - 手写promise'],
+        ['/components/page/ES6.md', 'ES新特性'],
+        ['/components/page/optimization.md', 'js性能优化'],
+        ['/components/page/this.md', 'this'],
+        ['/components/page/prototype.md', 'JavaScript基础 - 原型和原型链'],
+        ['/components/page/callBindApply.md', 'JavaScript基础 - call apply new'],
+        ['/components/page/datatype.md', 'JavaScript基础 - 数据类型'],
+      ]
+  },
+  {
+    title: '面试题整理',   
+    sidebarDepth: 3,    
+    children: [
+      ['/components/browser/browser.md', '浏览器原理'],
     ]
   },
   {
@@ -86,6 +94,7 @@ module.exports = [
       ['/components/question/webpack.md', 'webpack'],
       ['/components/question/vueVirtualdom.md', 'vue虚拟dom'],
       ['/components/question/node.md', 'nodejs高级编程'],
+      ['/components/browser/reviewQuestion.md', '2021面试题'],
     ]
   },
   {
