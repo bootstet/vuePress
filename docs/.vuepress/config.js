@@ -6,8 +6,8 @@ module.exports = resolve({
     ['link', {rel: 'icon', href: '/public/avatar.jpg'}]
   ],
   // description: '没有会与不会，只有知道与不知道',  // 
-  // base: '/boke/', // github 上配置
-  base: '/', // nginx 上配置
+  base: '/boke/', // github 上配置
+  // base: '/', // nginx 上配置
   markdown: {
     lineNumbers: true      // 代码块显示行号
   },
