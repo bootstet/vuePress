@@ -21,7 +21,8 @@ module.exports = [
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 3,    // 可选的, 默认值是 1
     children: [
-      ['/components/ts/', 'typeScript'],
+      ['/components/ts/', 'typeScript进阶'],
+      ['/components/ts/typescript.md', 'typeScript基础'],
       ['/components/question/design.md', 'JavaScript设计模式'],
     ]
   },
