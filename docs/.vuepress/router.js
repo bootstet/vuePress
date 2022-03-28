@@ -17,13 +17,6 @@ module.exports = [
       ]
   },
   {
-    title: '面试题整理',   
-    sidebarDepth: 3,    
-    children: [
-      ['/components/browser/browser.md', '浏览器原理'],
-    ]
-  },
-  {
     title: '前端学习记录',   // 必要的
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 3,    // 可选的, 默认值是 1
@@ -95,6 +88,13 @@ module.exports = [
       ['/components/question/vueVirtualdom.md', 'vue虚拟dom'],
       ['/components/question/node.md', 'nodejs高级编程'],
       ['/components/browser/reviewQuestion.md', '2021面试题'],
+    ]
+  },
+  {
+    title: '面试题整理',   
+    sidebarDepth: 3,    
+    children: [
+      ['/components/browser/browser.md', '浏览器原理'],
     ]
   },
   {
