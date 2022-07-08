@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "core-js": "^2.6.12",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "vuepress-theme-ting": "^2.0.2"
   }
 }
