@@ -132,6 +132,8 @@
   
   
   ### 2.5 useMemo()
+  在子组件不需要父组件的值和函数的情况下，只需要使用memo函数包裹子组件即可。而在使用函数的情况，需要考虑有没有函数传递给子组件使用useCallback。而在值有所依赖的项，并且是对象和数组等值的时候而使用useMemo（当返回的是原始数据类型如字符串、数字、布尔值，就不要使用useMemo了）。不要盲目使用这些hooks。
+
   ### 2.6 memo方法
   性能优化，如果本组件中的数据没有发生变化，组织组件更新。类似类组件中的PureComponent 和 shouldComponentUpdate
   ```js
@@ -142,6 +144,7 @@
     export default memo(Counter)
   ```
   ### 2.7 useCallBack()
+  [react Hook之useMemo、useCallback及memo](https://juejin.cn/post/6844903954539626510?searchId=202308301112398F83F2F5D178872F56E9)
   
 
 ## 3、自定义 Hooks
