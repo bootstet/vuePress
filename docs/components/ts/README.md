@@ -426,106 +426,104 @@ function loggingIdentity<T>(arg: Array<T>): Array<T> {
 ```
 
 ### infer
-```ts
-export {}
-interface Foo {
-  name: string,
-  age: number
-}
+```js
+  export {}
+  interface Foo {
+    name: string,
+    age: number
+  }
 
-type P = '12' | '233' | 'sdf'
-interface D {
-  P: '12' | '233' | 'sdf'
-}
+  type P = '12' | '233' | 'sdf'
+  interface D {
+    P: '12' | '233' | 'sdf'
+  }
 
-let type: D["P"] = '12'
+  let type: D["P"] = '12'
 
-// const obj: T = {
-//   name: 'fds'
-//   // age: 2,
-// }
+  // const obj: T = {
+  //   name: 'fds'
+  //   // age: 2,
+  // }
 
-const b: T = "age"
-const c: T = "name"
-// const d: T = 123
+  const b: T = "age"
+  const c: T = "name"
+  // const d: T = 123
 
-type T = keyof Foo
+  type T = keyof Foo
 
-type Obj = {
-  [p in T]: any // ==> { name: any, age: any }
-}
-const aa: Obj = { "name": 1, age: 2}
-const bb: Obj = { name: 1, age: 2}
+  type Obj = {
+    [p in T]: any // ==> { name: any, age: any }
+  }
+  const aa: Obj = { "name": 1, age: 2}
+  const bb: Obj = { name: 1, age: 2}
 
-// keyof 产生联合类型, in 则可以遍历枚举类型, 所以他们经常一起使用, 看下 Partial 源码
+  // keyof 产生联合类型, in 则可以遍历枚举类型, 所以他们经常一起使用, 看下 Partial 源码
 
-type Partial<D> = { [P in keyof D]?: D[P] }
+  type Partial<D> = { [P in keyof D]?: D[P] }
 
-const cc: Partial<Foo> = {
-  name: "345",
-  age: 18
-}
-
-
+  const cc: Partial<Foo> = {
+    name: "345",
+    age: 18
+  }
 
 ```
 
 + 用与提取参数类型
-```ts
-interface User {
-  name: string
-  age: number
-}
-//infer 最早出现在此 PR 中，表示在 extends 条件语句中待推断的类型变量。
+```js
+  interface User {
+    name: string
+    age: number
+  }
+  //infer 最早出现在此 PR 中，表示在 extends 条件语句中待推断的类型变量。
 
-type ParamType<T> = T extends (...args: infer P) => any ? P : T;
+  type ParamType<T> = T extends (...args: infer P) => any ? P : T;
 
-// 在这个条件语句 T extends (...args: infer P) => any ? P : T 中，infer P 表示待推断的函数参数。
+  // 在这个条件语句 T extends (...args: infer P) => any ? P : T 中，infer P 表示待推断的函数参数。
 
-// 整句表示为：如果 T 能赋值给 (...args: infer P) => any，则结果是 (...args: infer P) => any 类型中的参数 P，否则返回为 T。
+  // 整句表示为：如果 T 能赋值给 (...args: infer P) => any，则结果是 (...args: infer P) => any 类型中的参数 P，否则返回为 T。
 
-type Func = (user: User) => void
+  type Func = (user: User) => void
 
-type Param = ParamType<Func> // Param = User
-type AA = ParamType<string>; // string
+  type Param = ParamType<Func> // Param = User
+  type AA = ParamType<string>; // string
 ```
 
 + 用于提取函数返回值类型
-```ts
-type ReturnType<T> = T extends (...args: any[]) => infer P ? P : any;
+```js
+  type ReturnType<T> = T extends (...args: any[]) => infer P ? P : any;
 
 ```
-相比于文章开始给出的示例，ReturnType<T> 只是将 infer P 从参数位置移动到返回值位置，因此此时 P 即是表示待推断的返回值类型。
-```ts
-type Func = () => User;
-type Test = ReturnType<Func>; // Test = User
+   相比于文章开始给出的示例，ReturnType'T' 只是将 infer P 从参数位置移动到返回值位置，因此此时 P 即是表示待推断的返回值类型。
+```js
+  type Func = () => User;
+  type Test = ReturnType<Func>; // Test = User
 ```
 + 用于提取构造函数中参数（实例）类型：
 一个构造函数可以使用 new 来实例化，因此它的类型通常表示如下：
 
-```ts
-type Constructor = new (...args: any[]) => any;
+```js
+  type Constructor = new (...args: any[]) => any;
 ```
 
 当 infer 用于构造函数类型中，可用于参数位置 new (...args: infer P) => any; 和返回值位置 new (...args: any[]) => infer P;。
 
 因此就内置如下两个映射类型
-```ts
-// 获取参数类型
-type ConstructorParameters<T extends new (...args: any[]) => any> = T extends new (...args: infer P) => any
-  ? P
-  : never;
+```js
+  // 获取参数类型
+  type ConstructorParameters<T extends new (...args: any[]) => any> = T extends new (...args: infer P) => any
+    ? P
+    : never;
 
-// 获取实例类型
-type InstanceType<T extends new (...args: any[]) => any> = T extends new (...args: any[]) => infer R ? R : any;
+  // 获取实例类型
+  type InstanceType<T extends new (...args: any[]) => any> = T extends new (...args: any[]) => infer R ? R : any;
 
-class TestClass {
-  constructor(public name: string, public age: number) {}
-}
+  class TestClass {
+    constructor(public name: string, public age: number) {}
+  }
 
-type Params = ConstructorParameters<typeof TestClass>; // [string, number]
+  type Params = ConstructorParameters<typeof TestClass>; // [string, number]
 
-type Instance = InstanceType<typeof TestClass>; // TestClass
+  type Instance = InstanceType<typeof TestClass>; // TestClass
 ```
 
 

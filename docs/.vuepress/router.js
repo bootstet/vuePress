@@ -29,12 +29,19 @@ module.exports = [
       ]
   },
   {
-    title: '前端学习记录',   // 必要的
+    title: 'typeScript',   // 必要的
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 3,    // 可选的, 默认值是 1
     children: [
-      ['/components/ts/', 'typeScript进阶'],
       ['/components/ts/typescript.md', 'typeScript基础'],
+      ['/components/ts/', 'typeScript进阶'],
+    ]
+  },
+  {
+    title: '设计模式',   // 必要的
+    collapsable: true, // 可选的, 默认值是 true,
+    sidebarDepth: 3,    // 可选的, 默认值是 1
+    children: [
       ['/components/question/design.md', 'JavaScript设计模式'],
     ]
   },
@@ -130,7 +137,7 @@ module.exports = [
     ]
   },
   {
-    title: '看心情待定...',
+    title: '待定...',
     // path: '/components/page2/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
     collapsable: true, // 可选的, 默认值是 true,
     sidebarDepth: 2, 
