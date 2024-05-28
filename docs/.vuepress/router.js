@@ -19,7 +19,7 @@ module.exports = [
         ['/components/jsBase/this.md', 'Js之从ECMAScript规范解读this'],
         ['/components/jsBase/scopeChain.md', 'Js之作用域链'],
         ['/components/jsBase/objectMethods.md', 'Js之创建对象的多种方式及优缺点'],
-        ['/components/jsBase/aruguments.md', 'Js之参数按值传递'],
+        ['/components/jsBase/arguments.md', 'Js之参数按值传递'],
         ['/components/jsBase/executableContext.md', 'Js之执行上下文'],
         ['/components/jsBase/executableContextStack.md', 'Js之执行上下文栈'],
         ['/components/jsBase/argumentsObject.md', 'Js之类数组对象与arguments'],
