@@ -10,6 +10,9 @@ push_branch=ph-pages
 # 生成静态文件
 npm run docs:build
 
+# 进入生成的文件夹
+cd $dist_path
+
 git init
 git add -A 
 git commit -m "deploy, $commit_info"

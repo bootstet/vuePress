@@ -15,7 +15,7 @@ jobs:
       - name: Lock npm version
         uses: actions/setup-node@v3
         with:
-          node-version: 16.20.2
+          node-version: 14.18.1
 
       - name: Install and Build
         run: |
@@ -28,5 +28,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
           BRANCH: gh-pages
-          FOLDER: dist
+          FOLDER: docs/.vuepress/dist
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
