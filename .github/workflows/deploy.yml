@@ -20,7 +20,7 @@ jobs:
       - name: Install and Build
         run: |
           npm i 
-          npm run build:doc
+          npm run docs:build
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
 
